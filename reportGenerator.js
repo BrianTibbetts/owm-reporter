@@ -13,7 +13,7 @@ var request = require('request');
 const PORT = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 
-app.use(express.static('public'));
+app.use(express.static('/public'));
 
 app.get('/weather', function(req, res){
 	var q = url.parse(req.url, true).query;
