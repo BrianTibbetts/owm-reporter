@@ -1,0 +1,24 @@
+{
+  "name": "owmreporter",
+  "version": "1.0.0",
+  "dependencies": {
+	"ejs": "2.6.1"
+	"express": "4.17.0"
+	"request": "2.88.0"
+  }
+  "description": "",
+  "main": "reportGenerator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrianTibbetts/owm-reporter.git"
+  },
+  "author": "Brian Tibbetts <brian.tibbetts@maine.edu>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianTibbetts/owm-reporter/issues"
+  },
+  "homepage": "https://github.com/BrianTibbetts/owm-reporter#readme"
+}
