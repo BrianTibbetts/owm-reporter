@@ -2,10 +2,10 @@
   "name": "owmreporter",
   "version": "1.0.0",
   "dependencies": {
-	"ejs": "2.6.1"
-	"express": "4.17.0"
+	"ejs": "2.6.1",
+	"express": "4.17.0",
 	"request": "2.88.0"
-  }
+  },
   "description": "",
   "main": "reportGenerator.js",
   "scripts": {
