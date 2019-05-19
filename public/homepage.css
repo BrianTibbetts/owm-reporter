@@ -4,14 +4,12 @@ body {
 }
 
 body {
-	display: flex;
-	text-align: center;
+	display: inline-block;
 	background-color: #f5f5f5;
 }
 
 h1, label, input {
-	display: inline-block;
-	vertical-align: baseline;
+	display: block;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
