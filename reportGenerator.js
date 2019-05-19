@@ -29,7 +29,7 @@ app.get('/weather', function(req, res){
 		}
 		else{
 			var weather = JSON.parse(body)
-			if(weather.cod == 200){
+			if(weather.cod === 200){
 				var weatherReport = "Temperature in " + q.city + ", " + q.country + ": " + weather.main.temp
 					+ " degrees F";
 				
