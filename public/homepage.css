@@ -1,0 +1,31 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+  width: 80%;
+  max-width: 330px;
+  padding: 5px;
+}
+
+label, input {
+	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+	width: 40%;
+	text-align: left;
+}

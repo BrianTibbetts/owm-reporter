@@ -36,7 +36,8 @@ app.get('/weather', function(req, res){
 				
 				res.render('weather_template', {
 					weatherReport: weatherReport,
-					headerTitle: "OWMReporter - Current Weather"
+					headerTitle: "OWMReporter - Current Weather",
+					successMessage: "Search results..."
 				});
 			}
 			else{
