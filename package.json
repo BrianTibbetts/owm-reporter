@@ -1,11 +1,6 @@
 {
   "name": "owmreporter",
   "version": "1.0.0",
-  "dependencies": {
-	"ejs": "2.6.1",
-	"express": "4.17.0",
-	"request": "2.88.0"
-  },
   "description": "",
   "main": "reportGenerator.js",
   "scripts": {
@@ -17,6 +12,14 @@
   },
   "author": "Brian Tibbetts <brian.tibbetts@maine.edu>",
   "license": "ISC",
+    "dependencies": {
+	"ejs": "^2.6.1",
+	"express": "^4.17.0",
+	"request": "^2.88.0"
+  },
+  "engines": {
+	"node": "10.15.3"
+  },
   "bugs": {
     "url": "https://github.com/BrianTibbetts/owm-reporter/issues"
   },

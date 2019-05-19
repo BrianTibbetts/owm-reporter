@@ -10,7 +10,7 @@ var app = express();
 
 var request = require('request');
 
-app.set('port', 3000);
+const PORT = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
@@ -40,6 +40,6 @@ app.get('/weather', function(req, res){
 	});
 });
 
-var server = app.listen(app.get('port'), function() {
-	console.log('The server is running on http://localhost:' + app.get('port'));
+var server = app.listen(PORT, function() {
+	console.log('The server is listening on port: ' + PORT);
 });
