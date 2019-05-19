@@ -11,7 +11,8 @@ body {
 }
 
 h1, label, input {
-	display: block;
+	display: inline-block;
+	vertical-align: baseline;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
