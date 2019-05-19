@@ -29,12 +29,21 @@ app.get('/weather', function(req, res){
 		}
 		else{
 			var weather = JSON.parse(body)
-			var weatherReport = "Temperature in " + q.city + ", " + q.country + ": " + weather.main.temp
-				+ " degrees F";
+			if(weather.cod == 200){
+				var weatherReport = "Temperature in " + q.city + ", " + q.country + ": " + weather.main.temp
+					+ " degrees F";
 				
-			res.render('weather_template', {
-				weatherReport: weatherReport,
-				headerTitle: "OWMReporter - Current Weather"
+				res.render('weather_template', {
+					weatherReport: weatherReport,
+					headerTitle: "OWMReporter - Current Weather"
+			}
+			else{
+				var errorMessage = "Error code " + weather.cod + ": " + weather.message;
+				res.render('error', {
+					errorMessage: errorMessage,
+					headerTitle:"OMWReporter - Error"
+				}
+			}
 			});
 		}
 	});
