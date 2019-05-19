@@ -10,7 +10,7 @@ var app = express();
 
 var request = require('request');
 
-const PORT = process.env.PORT || 3000;
+app.set('port', 3000);
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
@@ -29,27 +29,17 @@ app.get('/weather', function(req, res){
 		}
 		else{
 			var weather = JSON.parse(body)
-			if(weather.cod === 200){
-				var weatherReport = "Temperature in " + q.city + ", " + q.country + ": " + weather.main.temp
-					+ " degrees F";
+			var weatherReport = "Temperature in " + q.city + ", " + q.country + ": " + weather.main.temp
+				+ " degrees F";
 				
-				res.render('weather_template', {
-					weatherReport: weatherReport,
-					headerTitle: "OWMReporter - Current Weather"
-				}
-			}
-			else{
-				var errorMessage = "Error code " + weather.cod + ": " + weather.message;
-				res.render('error', {
-					errorMessage: errorMessage,
-					headerTitle:"OMWReporter - Error"
-				}
-			}
+			res.render('weather_template', {
+				weatherReport: weatherReport,
+				headerTitle: "OWMReporter - Current Weather"
 			});
 		}
 	});
 });
 
-var server = app.listen(PORT, function() {
-	console.log('The server is listening on port: ' + PORT);
+var server = app.listen(app.get('port'), function() {
+	console.log('The server is running on http://localhost:' + app.get('port'));
 });
